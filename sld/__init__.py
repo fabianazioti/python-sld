@@ -1537,11 +1537,11 @@ class StyledLayerDescriptor(SLDNode):
         namedlayer.Name = name
         return namedlayer
 
-    def as_sld(self, pretty_print=False):
+    def as_sld(self, pretty_print=False, encoding="utf-8"):
         """
         Serialize this SLD model into a string.
 
         @rtype: string
         @returns: The content of the SLD.
         """
-        return tostring(self._node, pretty_print=pretty_print)
+        return tostring(self._node, pretty_print=pretty_print, encoding=encoding)
